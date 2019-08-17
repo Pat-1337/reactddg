@@ -36,10 +36,9 @@ class navbar extends Component {
   }
 
   renderResults() {
-    if (this.state.results === 0)
+    if (!this.state.results)
       return (
-        <p className="h1">No Results from API</p>,
-        console.log('Got Empty Array')
+        <p className="h1">No Results from API</p>
       );
     return <Results value={this.state.value} results={this.state.results} />;
   }
